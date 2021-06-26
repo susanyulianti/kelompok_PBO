@@ -44,7 +44,7 @@
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
-            NB
+            <i class="tim-icons icon-book-bookmark"></i>
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
             SMA Nusa Bangsa
@@ -59,20 +59,20 @@
           </li>
           <li>
             <a href="{{ asset('dashboard') }}/examples/icons.html">
-              <i class="tim-icons icon-atom"></i>
-              <p>Data Master</p>
+              <i class="tim-icons icon-single-02"></i>
+              <p>Data Member</p>
             </a>
           </li>
           <li>
             <a href="{{ asset('dashboard') }}/examples/map.html">
-              <i class="tim-icons icon-pin"></i>
-              <p>Maps</p>
+              <i class="tim-icons icon-map-big"></i>
+              <p>Data Buku</p>
             </a>
           </li>
           <li>
             <a href="{{ asset('dashboard') }}/examples/notifications.html">
-              <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
+              <i class="tim-icons icon-notes"></i>
+              <p>Data Transaksi</p>
             </a>
           </li>
           <li>
@@ -89,8 +89,8 @@
           </li>
           <li>
             <a href="{{ asset('dashboard') }}/examples/typography.html">
-              <i class="tim-icons icon-align-center"></i>
-              <p>Typography</p>
+              <i class="tim-icons icon-send"></i>
+              <p>Tentang Kami</p>
             </a>
           </li>
           <li>
@@ -120,7 +120,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:void(0)">Dashboard Perpustakaan</a>
+            <a class="navbar-brand" href="javascript:void(0)">Dashboard Perpustakaan SMA Nusa Bangsa</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
