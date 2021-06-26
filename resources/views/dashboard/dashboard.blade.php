@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
 =========================================================
 * * Black Dashboard - v1.0.1
@@ -22,7 +23,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('dashboard') }}/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="{{ asset('dashboard') }}/assets/img/favicon.png">
   <title>
-    Sistem Infomasi Perpustakaan
+  @yield('Title')
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />

@@ -16,12 +16,12 @@
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
-            <img src="{{ asset('template') }}/assets/images/login.png" alt="login" class="login-card-img">
+            <img src="{{ asset('template') }}/assets/images/login1.png" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
               <div class="brand-wrapper">
-                <img src="{{ asset('template') }}/assets/images/logo.svg" alt="logo" class="logo">
+              <p class="login-card-description">SISTEM PERPUSTAKAAN SMA NUSA BANGSA</p>
               </div>
               <p class="login-card-description">Sign into your account</p>
                 <form method="POST" action="{{ route('login') }}">
