@@ -25,7 +25,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        return view('member.create');
+        return view('Member.create');
     }
 
     /**
@@ -36,47 +36,58 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $name = $request->file('namephoto')->getClientOriginalName();
+       $request->get('namephoto')->move(public_path('images'), $name);
+       $request['photo'] = $name;
+       Member::create($request->except('namephoto'));
+
+        return redirect()->route('member.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Member  $member
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(Member $member)
     {
-        //
+        return view('Member.show', compact('member'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Member  $member
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Member $member)
     {
-        //
+        $members = Member::find($member);
+        return view('Member.edit', compact('members'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Member  $member
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Member $member)
     {
-        //
+        $name = $request->file('namephoto')->getClientOriginalName();
+       $request->namephoto->move(public_path('images'), $name);
+       $request['photo'] = $name;
+        $member->update($request->except('namephoto'));
+
+        return redirect()->route('member.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Member  $member
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Member $member)

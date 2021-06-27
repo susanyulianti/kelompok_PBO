@@ -23,7 +23,7 @@ class CreateMembersTable extends Migration
             $table->string('gender', 50);
             $table->string('nohp', 50);
             $table->string('alamat', 50);
-            $table->string('photo');
+            $table->string('namephoto');
             $table->timestampsTz();
         });
     }

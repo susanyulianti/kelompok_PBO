@@ -45,7 +45,7 @@
     </div>
     <div class="main-panel">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle d-inline">
@@ -295,7 +295,7 @@
             $('body').addClass('change-background');
             setTimeout(function() {
               $('body').removeClass('change-background');
-              $('body').removeClass('white-content');
+              $('body').removeClass('black-content');
             }, 900);
             white_color = false;
           } else {
