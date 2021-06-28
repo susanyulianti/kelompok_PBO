@@ -60,7 +60,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Masukan Foto Anda</label>
-                    <input type="file" name="namephoto" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file" name="photo" class="form-control-file" id="exampleFormControlFile1">
               </div>
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>

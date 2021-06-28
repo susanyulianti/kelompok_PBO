@@ -36,10 +36,10 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-       $name = $request->file('namephoto')->getClientOriginalName();
-       $request->get('namephoto')->move(public_path('images'), $name);
-       $request['photo'] = $name;
-       Member::create($request->except('namephoto'));
+       $name = $request->file('photo')->getClientOriginalName();
+       $request->photo->move(public_path('images'), $name);
+       $request['namephoto'] = $name;
+       Member::create($request->except('photo'));
 
         return redirect()->route('member.index');
     }
