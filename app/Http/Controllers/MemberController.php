@@ -36,10 +36,10 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-       $name = $request->file('photo')->getClientOriginalName();
-       $request->photo->move(public_path('images'), $name);
-       $request['namephoto'] = $name;
-       Member::create($request->except('photo'));
+        $name = $request->file('photo')->getClientOriginalName();
+        $request->photo->move(public_path('images'), $name);
+        $request['namephoto'] = $name;
+        Member::create($request->except('photo'));
 
         return redirect()->route('member.index');
     }
@@ -76,10 +76,10 @@ class MemberController extends Controller
      */
     public function update(Request $request, Member $member)
     {
-        $name = $request->file('namephoto')->getClientOriginalName();
-       $request->namephoto->move(public_path('images'), $name);
-       $request['photo'] = $name;
-        $member->update($request->except('namephoto'));
+        $name = $request->file('photo')->getClientOriginalName();//photo diambil dari name yang di form
+       $request->photo->move(public_path('images'), $name);//photo sama aja di ambil dari name form
+       $request['namephoto'] = $name;//namephoto yang disini sesuai database
+        $member->update($request->except('photo'));//photo yang disini sama aja di ambil dari form
 
         return redirect()->route('member.index');
     }
