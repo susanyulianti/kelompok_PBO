@@ -76,6 +76,7 @@ class MemberController extends Controller
      */
     public function update(Request $request, Member $member)
     {
+        // dd($request);
         $name = $request->file('photo')->getClientOriginalName();//photo diambil dari name yang di form
        $request->photo->move(public_path('images'), $name);//photo sama aja di ambil dari name form
        $request['namephoto'] = $name;//namephoto yang disini sesuai database

@@ -43,12 +43,12 @@
                       <input type="date" name="tanggal_lahir" class="form-control" value="{{$data->tanggal_lahir}}" id="inputTanggalLahir">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputJenisKelamin">Jenis Kelamin</label>
-                      <select id="inputJenisKelamin" class="form-control" value="">
-                        <option selected name="gender">{{$data->gender}}</option>
-                        <option>Laki-laki</option>
-                        <option>Perempuan</option>
-                      </select>
+                        <label for="inputGender">Jenis Kelamin</label>
+                        <select id="inputGender" name="gender" class="form-control" value="">
+                          <option selected>{{$data->gender}}</option>
+                          <option>Laki-Laki</option>
+                          <option>Perempuan</option>
+                        </select>
                     </div>
                   </div>
                 <div class="form-group">

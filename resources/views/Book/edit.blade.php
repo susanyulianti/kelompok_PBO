@@ -32,7 +32,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputJumlahHalaman">Jumlah Halaman</label>
-                      <input type="date" name="jumlah_halaman" class="form-control" value="{{$data->jumlah_halaman}}" id="inputJumlahHalaman">
+                      <input type="text" name="jumlah_halaman" class="form-control" value="{{$data->jumlah_halaman}}" id="inputJumlahHalaman">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputJumlahBuku">Jumlah Buku</label>

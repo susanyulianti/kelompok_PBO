@@ -35,15 +35,11 @@
                         <td class="text-center">{{$data->pengarang}}</td>
                         <td class="text-center">{{$data->penerbit}}</td>
                         <td class="td-actions text-right">
-                            <form action="{{ route('book.destroy', ['book' => $data->id]) }}" method="POST">
+                            <form action="{{ route('book.destroy', ['book'=>$data->id]) }}" method="post">
                                 @csrf @method('DELETE')
-                                <a href="{{ route('book.edit', $data->id) }}" type="button" rel="tooltip" class="btn btn-info btn-sm btn-round btn-icon">
-                                <i class="tim-icons icon-pencil"></i></a>
-                                <a href="{{ route('book.show', $data->id) }}" type="button" rel="tooltip" class="btn btn-success btn-sm btn-round btn-icon">
-                                    <i class="tim-icons icon-single-02"></i></a>
-                            <button type="button" rel="tooltip" class="btn btn-danger btn-sm btn-round btn-icon" onclick="return confirm('Are you sure you want to delete this item?');">
-                                <i class="tim-icons icon-simple-remove"></i>
-                            </button>
+                                <a class="btn btn-info btn-sm btn-round btn-icon" href="{{ route('book.edit', ['book'=>$data->id]) }}" role="button"><i class="tim-icons icon-pencil"></i></a>
+                                <a class="btn btn-success btn-sm btn-round btn-icon" href="{{ route('book.show', ['book'=>$data->id]) }}" role="button"><i class="tim-icons icon-single-02"></i></a>
+                                <button type="submit" class="btn btn-danger btn-sm btn-round btn-icon" onclick="return confirm('apakah anda mau menghapus data ini ?')"><i class="tim-icons icon-simple-remove"></i></button>
                             </form>
                           </td>
                     </tr>

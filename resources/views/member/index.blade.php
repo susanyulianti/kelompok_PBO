@@ -33,15 +33,11 @@
                         <td class="text-center">{{$data->nohp}}</td>
                         <td class="text-center">{{$data->alamat}}</td>
                         <td class="td-actions text-right">
-                            <form action="{{ route('member.destroy', ['member'=>$data->id]) }}" method="POST">
+                            <form action="{{ route('member.destroy', ['member'=>$data->id]) }}" method="post">
                                 @csrf @method('DELETE')
-                                <a href="{{ route('member.edit', ['member'=>$data->id]) }}" type="button" rel="tooltip" class="btn btn-info btn-sm btn-round btn-icon">
-                                <i class="tim-icons icon-pencil"></i></a>
-                                <a href="{{ route('member.show', ['member'=>$data->id]) }}" class="btn btn-success btn-sm btn-round btn-icon">
-                                    <i class="tim-icons icon-single-02"></i></a>
-                            <button type="button" rel="tooltip" class="btn btn-danger btn-sm btn-round btn-icon" onclick="return confirm('Are you sure you want to delete this item?');">
-                                <i class="tim-icons icon-simple-remove"></i>
-                            </button>
+                                <a class="btn btn-info btn-sm btn-round btn-icon" href="{{ route('member.edit', ['member'=>$data->id]) }}" role="button"><i class="tim-icons icon-pencil"></i></a>
+                                <a class="btn btn-success btn-sm btn-round btn-icon" href="{{ route('member.show', ['member'=>$data->id]) }}" role="button"><i class="tim-icons icon-single-02"></i></a>
+                                <button type="submit" class="btn btn-danger btn-sm btn-round btn-icon" onclick="return confirm('apakah anda mau menghapus data ini ?')"><i class="tim-icons icon-simple-remove"></i></button>
                             </form>
                           </td>
                     </tr>
