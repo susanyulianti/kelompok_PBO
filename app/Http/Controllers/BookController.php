@@ -14,7 +14,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+        return view('book.index', compact('books'));
     }
 
     /**
@@ -24,7 +25,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('Book.create');
     }
 
     /**
@@ -35,47 +36,58 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = $request->file('photo')->getClientOriginalName();
+        $request->photo->move(public_path('images'), $name);
+        $request['namephoto'] = $name;
+        Book::create($request->except('photo'));
+
+        return redirect()->route('book.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Book  $book
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(Book $book)
     {
-        //
+        return view('Book.show', compact('book'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Book  $book
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Book $book)
     {
-        //
+        $books = Book::find($book);
+        return view('Book.edit', compact('books'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Book  $book
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $name = $request->file('photo')->getClientOriginalName();//photo diambil dari name yang di form
+       $request->photo->move(public_path('images'), $name);//photo sama aja di ambil dari name form
+       $request['namephoto'] = $name;//namephoto yang disini sesuai database
+        $book->update($request->except('photo'));//photo yang disini sama aja di ambil dari form
+
+        return redirect()->route('book.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Book  $book
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Book $book)

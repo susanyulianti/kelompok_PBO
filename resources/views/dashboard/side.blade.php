@@ -14,14 +14,14 @@
           <p>Dashboard</p>
         </a>
       </li>
-      <li>
-        <a href="{{ route('member.index') }}">
+      <li class="nav-item">
+        <a href="{{ route('member.index') }}" class="nav-link">
           <i class="tim-icons icon-single-02"></i>
           <p>Data Member</p>
         </a>
       </li>
-      <li>
-        <a href="{{ route('member.index') }}">
+      <li class="nav-item">
+        <a href="{{ route('book.index') }}" class="nav-link">
           <i class="tim-icons icon-map-big"></i>
           <p>Data Buku</p>
         </a>

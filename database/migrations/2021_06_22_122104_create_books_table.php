@@ -20,10 +20,10 @@ class CreateBooksTable extends Migration
             $table->string('jenis_buku', 50);
             $table->string('jumlah_halaman', 50);
             $table->string('jumlah_buku', 50);
-            $table->date('tahun_terbit', 50);
+            $table->string('tahun_terbit', 50);
             $table->string('penerbit', 100);
             $table->string('pengarang', 100);
-            $table->string('photo');
+            $table->string('namephoto');
             $table->timestampsTz();
         });
     }
