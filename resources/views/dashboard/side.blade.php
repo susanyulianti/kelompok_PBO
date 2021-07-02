@@ -27,7 +27,7 @@
         </a>
       </li>
       <li>
-        <a href="{{ route('member.index') }}">
+        <a href="{{ route('transaction.index') }}">
           <i class="tim-icons icon-notes"></i>
           <p>Data Transaksi</p>
         </a>
