@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
+use App\Models\Member;
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class TransactionController extends Controller
@@ -15,6 +17,7 @@ class TransactionController extends Controller
     public function index()
     {
         $transactions = Transaction::all();
+
         return view('transaction.index', compact('transactions'));
     }
 
@@ -25,7 +28,10 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        return view('Transaction.create');
+        $books = Book::all();
+        $members = Member::all();
+        // dd($members);
+        return view('Transaction.create',compact('books','members'));
     }
 
     /**
@@ -36,10 +42,10 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->file('photo')->getClientOriginalName();
-        $request->photo->move(public_path('images'), $name);
-        $request['namephoto'] = $name;
-        Transaction::create($request->except('photo'));
+        // $name = $request->file('photo')->getClientOriginalName();
+        // $request->photo->move(public_path('images'), $name);
+        // $request['namephoto'] = $name;
+        Transaction::create($request->all());
 
         return redirect()->route('transaction.index');
     }

@@ -29,7 +29,13 @@
       <li>
         <a href="{{ route('transaction.index') }}">
           <i class="tim-icons icon-notes"></i>
-          <p>Data Transaksi</p>
+          <p>Data Peminjaman</p>
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('bookreturn.index') }}">
+          <i class="tim-icons icon-notes"></i>
+          <p>Data Pengembalian</p>
         </a>
       </li>
       <li>

@@ -18,50 +18,26 @@
                     <input type="text" name="kd_transaksi" class="form-control" id="inputKodeTransaksi">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputNamaLengkap">Nama Lengkap</label>
-                    <input type="text" name="nm_member" class="form-control" id="inputNamaLengkap">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputKelas">Kelas</label>
-                    <input type="text" name="kelas" class="form-control" id="inputKelas">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputJurusan">Jurusan</label>
-                    <select id="inputJurusan" name="jurusan" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>IPA</option>
-                      <option>IPS</option>
+                    <label for="inputJurusan">Member</label>
+                    <select id="inputJurusan" name="member_id" class="form-control">
+                        <option selected>Choose...</option>
+                        @foreach ($members as $data)
+                        <option value="{{$data->id}}">{{$data->nm_member}}</option>
+                        @endforeach
                     </select>
                   </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputTanggalLahir">Tanggal Lahir</label>
-                      <input type="date" name="tanggal_lahir" class="form-control" id="inputTanggalLahir">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputJenisKelamin">Jenis Kelamin</label>
-                      <select id="inputJenisKelamin" name="gender" class="form-control">
+                  <div class="form-group col-md-6">
+                    <label for="inputJurusan">Book</label>
+                    <select id="inputJurusan" name="book_id" class="form-control">
                         <option selected>Choose...</option>
-                        <option>Laki-laki</option>
-                        <option>Perempuan</option>
-                      </select>
-                    </div>
+                        @foreach ($books as $data)
+                        <option value="{{$data->id}}">{{$data->judul_buku}}</option>
+                        @endforeach
+                    </select>
                   </div>
-                <div class="form-group">
-                    <label for="inputNohp">No Telepon</label>
-                    <input type="text" name="nohp" class="form-control" id="inputNohp" >
-                  </div>
-                  <div class="form-group">
-                    <label for="inputAlamat">Alamat</label>
-                    <input type="text" name="alamat" class="form-control" id="inputAlamat" >
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Masukan Foto Anda</label>
-                    <input type="file" name="photo" class="form-control-file" id="exampleFormControlFile1">
-              </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>
           </div>

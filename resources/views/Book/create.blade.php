@@ -39,7 +39,7 @@
                       </div>
                     <div class="form-group col-md-4">
                         <label for="inputTahunTerbit">Tahun Terbit</label>
-                        <input type="text" name="tahun_terbit" class="form-control" id="inputTahunTerbit">
+                        <input type="date" name="tahun_terbit" class="form-control" id="inputTahunTerbit">
                     </div>
                   </div>
                 <div class="form-group">

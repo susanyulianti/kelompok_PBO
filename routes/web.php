@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\BookReturnController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('member', MemberController::class);
 Route::resource('book', BookController::class);
 Route::resource('transaction', TransactionController::class);
-
+Route::resource('bookreturn', BookReturnController::class);

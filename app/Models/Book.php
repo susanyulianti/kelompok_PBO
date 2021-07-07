@@ -10,6 +10,9 @@ class Book extends Model
     public function transactions(){
         return $this->hasMany(Transaction::class);
     }
+    public function bookreturns(){
+        return $this->hasMany(BookReturn::class);
+    }
     use HasFactory;
     protected $guarded = [];
 }
