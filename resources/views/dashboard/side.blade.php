@@ -38,13 +38,5 @@
           <p>Data Pengembalian</p>
         </a>
       </li>
-      <li>
-        <a href="{{ asset('dashboard') }}/examples/icons.html">
-          <i class="tim-icons icon-atom"></i>
-          <p>
-              Data Master
-            </p>
-        </a>
-      </li>
     </ul>
   </div>
