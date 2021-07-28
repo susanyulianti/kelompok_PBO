@@ -27,3 +27,4 @@ Route::resource('member', MemberController::class);
 Route::resource('book', BookController::class);
 Route::resource('transaction', TransactionController::class);
 Route::resource('bookreturn', BookReturnController::class);
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
