@@ -14,7 +14,7 @@
             <div class="table-responsive">
               <table class="table tablesorter " id="">
                 <thead class=" text-primary">
-                  <tr>
+                  <tr>~
                     <th>No</th>
                     <th class="text-center">Kode Transaksi</th>
                     <th class="text-center">Nama Member</th>

@@ -7,8 +7,11 @@
         <div class="card  card-plain">
           <div class="card-header">
             <h3 class="card-title"> DATA BUKU </h3>
+            @if (auth()->user()->role=='admin')
             <a href="{{ route('book.create') }}" class="btn btn-primary">Tambah Data</a>
             <a href="#" onclick="javascript:window.print()"  class="btn btn-primary"><i class="fas fa-print"></i></a>
+            @elseif (auth()->user()->role=='user')
+            @endif
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -22,7 +25,10 @@
                     <th class="text-center">Jumlah Buku</th>
                     <th class="text-center">Pengarang</th>
                     <th class="text-center">Penerbit</th>
+                    @if (auth()->user()->role=='admin')
                     <th class="text-center">Action</th>
+                    @elseif (auth()->user()->role=='user')
+                    @endif
                   </tr>
                 </thead>
                 <tbody>
@@ -35,6 +41,7 @@
                         <td class="text-center">{{$data->jumlah_buku}}</td>
                         <td class="text-center">{{$data->pengarang}}</td>
                         <td class="text-center">{{$data->penerbit}}</td>
+                        @if (auth()->user()->role=='admin')
                         <td class="td-actions text-right">
                             <form action="{{ route('book.destroy', ['book'=>$data->id]) }}" method="post">
                                 @csrf @method('DELETE')
@@ -43,6 +50,8 @@
                                 <button type="submit" class="btn btn-danger btn-sm btn-round btn-icon" onclick="return confirm('apakah anda mau menghapus data ini ?')"><i class="tim-icons icon-simple-remove"></i></button>
                             </form>
                           </td>
+                        @elseif (auth()->user()->role=='user')
+                        @endif
                     </tr>
                 </tbody>
                 @endforeach
