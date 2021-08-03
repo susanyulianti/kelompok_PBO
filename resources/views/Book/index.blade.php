@@ -8,6 +8,7 @@
           <div class="card-header">
             <h3 class="card-title"> DATA BUKU </h3>
             <a href="{{ route('book.create') }}" class="btn btn-primary">Tambah Data</a>
+            <a href="#" onclick="javascript:window.print()"  class="btn btn-primary"><i class="fas fa-print"></i></a>
           </div>
           <div class="card-body">
             <div class="table-responsive">
